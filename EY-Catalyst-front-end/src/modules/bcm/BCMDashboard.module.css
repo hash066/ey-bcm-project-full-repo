@@ -1,0 +1,146 @@
+/* BCMDashboard.module.css */
+.container {
+  width: 100%;
+  padding: 2rem;
+  background: var(--bg-primary);
+  min-height: 100vh;
+}
+
+.title {
+  color: var(--accent-color);
+  font-weight: 800;
+  font-size: 32px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.widgetGrid {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.widget {
+  min-width: 220px;
+  flex: 1;
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 16px var(--shadow-color);
+  transition: all 0.3s ease;
+}
+
+.widget:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+.widgetIcon {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.widgetTitle {
+  color: var(--accent-color);
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.widgetContent {
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.widgetList {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.widgetListItem {
+  margin-bottom: 6px;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.widgetListItemHighlight {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.widgetGridLarge {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.widgetLarge {
+  min-width: 320px;
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 16px var(--shadow-color);
+  transition: all 0.3s ease;
+}
+
+.widgetLarge:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+.widgetGridBottom {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.widgetBottom {
+  min-width: 220px;
+  flex: 1;
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 16px var(--shadow-color);
+  transition: all 0.3s ease;
+}
+
+.widgetBottom:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .widgetGrid,
+  .widgetGridLarge,
+  .widgetGridBottom {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .widget,
+  .widgetLarge,
+  .widgetBottom {
+    min-width: 100%;
+    padding: 1rem;
+  }
+  
+  .widgetTitle {
+    font-size: 18px;
+  }
+} 

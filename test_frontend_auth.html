@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Frontend Authentication</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .success {
+            color: green;
+            padding: 10px;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .error {
+            color: red;
+            padding: 10px;
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .info {
+            color: #004085;
+            padding: 10px;
+            background: #cce5ff;
+            border: 1px solid #b8daff;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Test Frontend Authentication</h1>
+        
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <select id="username">
+                <option value="admin.demo">admin.demo (System Admin)</option>
+                <option value="ceo.demo">ceo.demo (CEO)</option>
+                <option value="depthead.demo">depthead.demo (Department Head)</option>
+                <option value="subdepthead.demo">subdepthead.demo (SubDepartment Head)</option>
+                <option value="processowner.demo">processowner.demo (Process Owner)</option>
+                <option value="bcmcoord.demo">bcmcoord.demo (BCM Coordinator)</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" value="Admin@123">
+        </div>
+        
+        <button onclick="login()">Login</button>
+        <button onclick="testEndpoint()">Test Protected Endpoint</button>
+        <button onclick="clearToken()">Clear Token</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8002';
+        
+        // Update password based on selected user
+        document.getElementById('username').addEventListener('change', function() {
+            const passwords = {
+                'admin.demo': 'Admin@123',
+                'ceo.demo': 'CEO@123',
+                'depthead.demo': 'DeptHead@123',
+                'subdepthead.demo': 'SubDept@123',
+                'processowner.demo': 'Process@123',
+                'bcmcoord.demo': 'BCM@123'
+            };
+            document.getElementById('password').value = passwords[this.value];
+        });
+        
+        async function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const resultDiv = document.getElementById('result');
+            
+            resultDiv.innerHTML = '<div class="info">Logging in...</div>';
+            
+            try {
+                const response = await fetch(`${API_BASE}/auth/token`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `username=${username}&password=${password}`
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                // Store token in localStorage
+                localStorage.setItem('brt_token', data.access_token);
+                
+                resultDiv.innerHTML = `
+                    <div class="success">
+                        <strong>✅ Login Successful!</strong><br>
+                        User ID: ${data.user_id}<br>
+                        Username: ${data.username}<br>
+                        Role: ${data.role}<br>
+                        Token stored in localStorage as 'brt_token'<br>
+                        <br>
+                        <strong>Token (first 50 chars):</strong><br>
+                        <code>${data.access_token.substring(0, 50)}...</code>
+                    </div>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="error">
+                        <strong>❌ Login Failed!</strong><br>
+                        ${error.message}
+                    </div>
+                `;
+            }
+        }
+        
+        async function testEndpoint() {
+            const resultDiv = document.getElementById('result');
+            const token = localStorage.getItem('brt_token');
+            
+            if (!token) {
+                resultDiv.innerHTML = '<div class="error">❌ No token found! Please login first.</div>';
+                return;
+            }
+            
+            resultDiv.innerHTML = '<div class="info">Testing protected endpoint...</div>';
+            
+            try {
+                // Test /auth/me endpoint
+                const response = await fetch(`${API_BASE}/auth/me`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                resultDiv.innerHTML = `
+                    <div class="success">
+                        <strong>✅ Protected Endpoint Accessible!</strong><br>
+                        <br>
+                        <strong>Response from /auth/me:</strong><br>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    </div>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="error">
+                        <strong>❌ Failed to access protected endpoint!</strong><br>
+                        ${error.message}<br>
+                        <br>
+                        This usually means:<br>
+                        - Token is expired (login again)<br>
+                        - Token is invalid<br>
+                        - Backend is not running
+                    </div>
+                `;
+            }
+        }
+        
+        function clearToken() {
+            localStorage.removeItem('brt_token');
+            document.getElementById('result').innerHTML = '<div class="info">Token cleared from localStorage</div>';
+        }
+        
+        // Check if token exists on page load
+        window.onload = function() {
+            const token = localStorage.getItem('brt_token');
+            if (token) {
+                document.getElementById('result').innerHTML = `
+                    <div class="info">
+                        <strong>ℹ️ Token found in localStorage</strong><br>
+                        Token (first 50 chars): <code>${token.substring(0, 50)}...</code><br>
+                        <br>
+                        Click "Test Protected Endpoint" to verify it works.
+                    </div>
+                `;
+            }
+        };
+    </script>
+</body>
+</html>

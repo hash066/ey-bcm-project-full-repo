@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Procedures UI Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .test-section {
+            background: linear-gradient(135deg, #232323, #2a2a2a);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #FFD700;
+            margin-bottom: 30px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        .header h2 {
+            color: #FFD700;
+            margin: 0;
+            font-size: 28px;
+            margin-left: 15px;
+        }
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .btn {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: #fff;
+            border: none;
+            padding: 18px 24px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(76, 175, 80, 0.4);
+        }
+        .btn-orange {
+            background: linear-gradient(135deg, #FF9800, #f57c00);
+            box-shadow: 0 4px 8px rgba(255, 152, 0, 0.3);
+        }
+        .btn-blue {
+            background: linear-gradient(135deg, #2196F3, #1976d2);
+            box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
+        }
+        .btn-purple {
+            background: linear-gradient(135deg, #9C27B0, #7b1fa2);
+            box-shadow: 0 4px 8px rgba(156, 39, 176, 0.3);
+        }
+        .info-box {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #444;
+            margin-bottom: 20px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            color: #ccc;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .procedure-content {
+            background: #fff;
+            color: #000;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .section-header {
+            color: #fff;
+            background: linear-gradient(135deg, #FFD700, #FFA000);
+            margin: 0;
+            padding: 15px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px 8px 0 0;
+        }
+        .section-content {
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+        }
+        .status-message {
+            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+            color: #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border: 1px solid #66bb6a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #FFD700; text-align: center; margin-bottom: 40px; font-size: 36px;">
+            🚀 Enhanced Procedures UI Test
+        </h1>
+
+        <!-- Generate Section -->
+        <div class="test-section">
+            <div class="header">
+                <span style="font-size: 32px;">✨</span>
+                <h2>Generate Complete Procedure</h2>
+            </div>
+
+            <div class="info-box">
+                <h3 style="color: #FFD700; margin-bottom: 15px; font-size: 20px;">
+                    🎯 Current Procedure Type: BIA
+                </h3>
+                <div style="color: #ccc; line-height: 1.6;">
+                    <p><strong>Business Impact Analysis (BIA)</strong> - Comprehensive assessment of business processes and their criticality.</p>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Process criticality assessment</li>
+                        <li>Recovery time objectives (RTO)</li>
+                        <li>Impact analysis matrices</li>
+                        <li>Resource dependencies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="button-grid">
+                <button class="btn" onclick="showMessage('Generating new procedure...')">
+                    <span style="font-size: 20px;">🎆</span>
+                    Generate New Procedure
+                </button>
+                <button class="btn btn-orange" onclick="showMessage('Regenerating with fresh AI...')">
+                    <span style="font-size: 20px;">🔄</span>
+                    Regenerate with Fresh AI
+                </button>
+                <button class="btn btn-blue" onclick="showMessage('Exporting to DOCX...')">
+                    <span style="font-size: 20px;">📄</span>
+                    Export to DOCX
+                </button>
+            </div>
+
+            <div class="info-box">
+                <h4 style="color: #FFD700; margin-bottom: 15px; font-size: 18px;">
+                    🚀 What You Get:
+                </h4>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <span>🎯</span>
+                        <span>ISO 22301:2019 Compliant</span>
+                    </div>
+                    <div class="feature-item">
+                        <span>📊</span>
+                        <span>Organization-Specific Content</span>
+                    </div>
+                    <div class="feature-item">
+                        <span>⚙️</span>
+                        <span>AI-Powered Generation</span>
+                    </div>
+                    <div class="feature-item">
+                        <span>📈</span>
+                        <span>Professional Documentation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sample Procedure Content -->
+        <div class="procedure-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 3px solid #FFD700; padding-bottom: 15px;">
+                <h2 style="color: #333; margin: 0; font-size: 28px;">
+                    📋 BIA Procedure
+                </h2>
+                <div style="color: #666; font-size: 14px;">
+                    <div><strong>Organization:</strong> Sample Organization</div>
+                    <div><strong>Generated:</strong> December 1, 2024</div>
+                    <div><strong>Version:</strong> v20241201_120000</div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 35px; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+                <h3 class="section-header">
+                    📖 Introduction
+                </h3>
+                <div class="section-content">
+                    <div style="line-height: 1.8; font-size: 16px; color: #333;">
+                        <p>This Business Impact Analysis (BIA) procedure establishes a systematic approach for identifying and evaluating the potential impacts of business disruptions on critical processes, resources, and operations within the organization.</p>
+                        <p>The procedure aligns with ISO 22301:2019 standards and provides a comprehensive framework for understanding business continuity requirements and recovery priorities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 35px; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+                <h3 class="section-header">
+                    🎯 Scope
+                </h3>
+                <div class="section-content">
+                    <div style="line-height: 1.8; font-size: 16px; color: #333;">
+                        <p>This procedure applies to all business processes, departments, and functions within the organization that could be impacted by disruptions to normal operations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 35px; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+                <h3 class="section-header">
+                    ⚡ Critical Processes
+                </h3>
+                <div class="section-content">
+                    <div style="display: grid; gap: 15px;">
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 6px; border: 1px solid #e9ecef;">
+                            <div style="margin-bottom: 8px;">
+                                <strong style="color: #495057;">Process:</strong> 
+                                <span style="margin-left: 8px; color: #6c757d;">Customer Service Operations</span>
+                            </div>
+                            <div style="margin-bottom: 8px;">
+                                <strong style="color: #495057;">Department:</strong> 
+                                <span style="margin-left: 8px; color: #6c757d;">Customer Support</span>
+                            </div>
+                            <div style="margin-bottom: 8px;">
+                                <strong style="color: #495057;">RTO:</strong> 
+                                <span style="margin-left: 8px; color: #6c757d;">4 hours</span>
+                            </div>
+                            <div>
+                                <strong style="color: #495057;">Criticality:</strong> 
+                                <span style="margin-left: 8px; color: #6c757d;">Critical</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-purple" onclick="showMessage('Opening refine tab...')">
+                    🔧 Refine This Procedure
+                </button>
+                <button class="btn btn-blue" onclick="showMessage('Exporting to DOCX...')">
+                    📄 Export to DOCX
+                </button>
+                <button class="btn btn-orange" onclick="showMessage('Opening versions tab...')">
+                    📚 View All Versions
+                </button>
+            </div>
+        </div>
+
+        <!-- Status Message Area -->
+        <div id="statusMessage" style="display: none;" class="status-message">
+            <span style="font-size: 20px;">✅</span>
+            <div>
+                <strong>Success:</strong> <span id="messageText"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showMessage(message) {
+            const statusDiv = document.getElementById('statusMessage');
+            const messageText = document.getElementById('messageText');
+            
+            messageText.textContent = message;
+            statusDiv.style.display = 'flex';
+            
+            setTimeout(() => {
+                statusDiv.style.display = 'none';
+            }, 3000);
+        }
+
+        // Add hover effects
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
