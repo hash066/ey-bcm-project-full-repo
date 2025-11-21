@@ -1,0 +1,14 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/sanikaa-16/EY-Catalyst-front-end.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "new_integration"]
+	remote = origin
+	merge = refs/heads/new_integration
+	vscode-merge-base = origin/main
