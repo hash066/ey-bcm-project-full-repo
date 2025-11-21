@@ -5,7 +5,7 @@ const BASE_URL = 'https://Prithivi-nanda-EY-catalyst.hf.space';
 
 // Helper to get the API key (replace with your method of storing/retrieving the key)
 const getAuthHeader = () => ({
-  Authorization: 'Bearer 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'
+  Authorization: 'Bearer your-huggingface-token-here'
 });
 
 // Fallback dummy data for when LLM fails
@@ -280,4 +280,4 @@ export const generateSectionWithLLM = (section, context) => {
       message: 'Fallback: LLM generation failed, using predefined content'
     }
   );
-}; 
+};

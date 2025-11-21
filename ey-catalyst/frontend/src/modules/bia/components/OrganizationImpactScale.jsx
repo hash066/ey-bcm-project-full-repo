@@ -297,7 +297,7 @@ const OrganizationImpactScale = () => {
       const response = await fetch('https://Prithivi-nanda-EY-catalyst.hf.space/get-bia-matrix-choices', {
         method: 'POST',
         headers: {
-          'Authorization': 'Bearer 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',
+          'Authorization': 'Bearer your-huggingface-token-here',
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({

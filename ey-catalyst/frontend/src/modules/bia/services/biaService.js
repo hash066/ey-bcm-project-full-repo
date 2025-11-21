@@ -505,7 +505,7 @@ export const getImpactScaleMatrix = async (processName, impactName) => {
     const response = await fetch(`https://Prithivi-nanda-EY-catalyst.hf.space/get-impact-scale-matrix`, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer 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`,
+        'Authorization': `Bearer your-huggingface-token-here`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ 
@@ -597,7 +597,7 @@ export const getAIDescription = async (queryType, queryName) => {
     const response = await fetch('https://Prithivi-nanda-EY-catalyst.hf.space/get-description', {
       method: 'POST',
       headers: {
-        'Authorization': 'Bearer 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',
+        'Authorization': 'Bearer your-huggingface-token-here',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -630,7 +630,7 @@ export const getAIPeakPeriod = async (department, processName, sector) => {
     const response = await fetch('https://Prithivi-nanda-EY-catalyst.hf.space/get-peak-period/', {
       method: 'POST',
       headers: {
-        'Authorization': 'Bearer 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',
+        'Authorization': 'Bearer your-huggingface-token-here',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -822,7 +822,7 @@ export const sendProcessToLLM = async (processData) => {
     const response = await fetch(`https://Prithivi-nanda-EY-catalyst.hf.space/get-impact-scale-matrix`, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer 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`,
+        'Authorization': `Bearer your-huggingface-token-here`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
