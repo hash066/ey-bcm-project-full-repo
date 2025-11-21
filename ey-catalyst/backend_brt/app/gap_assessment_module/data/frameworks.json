@@ -1,0 +1,43 @@
+{
+  "RBI": {
+    "name": "RBI Cybersecurity Framework",
+    "version": "1.0",
+    "description": "Reserve Bank of India Cybersecurity Framework",
+    "domains": {
+      "Governance": [
+        {
+          "id": "RBI-GOV-001",
+          "name": "Cybersecurity Policy",
+          "description": "Organization shall have a cybersecurity policy approved by the board",
+          "requirements": [
+            "Board-approved cybersecurity policy",
+            "Annual policy review",
+            "Policy communication to all stakeholders"
+          ],
+          "evidence_types": [
+            "Board meeting minutes",
+            "Approved policy document",
+            "Communication records"
+          ]
+        }
+      ],
+      "Risk Management": [
+        {
+          "id": "RBI-RISK-001",
+          "name": "Risk Assessment",
+          "description": "Regular cybersecurity risk assessments shall be conducted",
+          "requirements": [
+            "Annual risk assessment",
+            "Risk register maintenance",
+            "Risk mitigation plans"
+          ],
+          "evidence_types": [
+            "Risk assessment reports",
+            "Risk register",
+            "Mitigation plan documents"
+          ]
+        }
+      ]
+    }
+  }
+}

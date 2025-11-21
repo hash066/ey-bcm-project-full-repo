@@ -1,0 +1,316 @@
+{
+  "frameworks": [
+    {
+      "id": "RBI",
+      "name": "Reserve Bank of India",
+      "controls": [
+        {
+          "control_id": "RBI-001",
+          "domain": "Leadership",
+          "control_name": "Board oversight and approval of BCP",
+          "control_description": "The Board fulfils its responsibilities by approving policy on BCP, prioritizing critical business functions, allocating sufficient resources, reviewing BCP test results and ensuring maintenance and periodic updation of BCP."
+        },
+        {
+          "control_id": "RBI-002",
+          "domain": "BCP Methodology",
+          "control_name": "BCP methodology components (BIA / RTO / RPO / Testing / Training)",
+          "control_description": "BCP methodology should include defining BIA, RTO, RPO, Training and BCP testing."
+        },
+        {
+          "control_id": "RBI-003",
+          "domain": "Risk Management",
+          "control_name": "Information risk management inclusion",
+          "control_description": "BCP must include a robust information risk management system, if not already implemented, within a fixed time frame."
+        },
+        {
+          "control_id": "RBI-004",
+          "domain": "Strategy",
+          "control_name": "Consideration of wide-area disasters & interdependencies",
+          "control_description": "BCP should take into account the potential for wide area disasters that may affect an entire region and for the resulting loss or inaccessibility of staff; it should also consider and address interdependencies, both market based and geographic, among financial system participants as well as infrastructure service providers."
+        },
+        {
+          "control_id": "RBI-005",
+          "domain": "Operations",
+          "control_name": "Project/change management & data centre processes",
+          "control_description": "The BCP should take into account the project management procedures, change management process, data center process, backup and recovery process."
+        },
+        {
+          "control_id": "RBI-006",
+          "domain": "Strategy",
+          "control_name": "BCP strategies to provide adequate assurance",
+          "control_description": "BCP strategies considered should provide an adequate level of comfort and assurance in tackling serious disruptions."
+        },
+        {
+          "control_id": "RBI-007",
+          "domain": "Risk Transfer",
+          "control_name": "Insurance as risk mitigation",
+          "control_description": "Banks must consider insurance as a risk mitigation strategy for external risks to a third party so as to reduce financial exposure in the event of disruptions."
+        },
+        {
+          "control_id": "RBI-008",
+          "domain": "Governance",
+          "control_name": "Board-approved BCP availability to RBI",
+          "control_description": "A copy of the BCP approved by the Board can be forwarded for perusal to the General Manager, Reserve Bank of India."
+        },
+        {
+          "control_id": "RBI-009",
+          "domain": "Reporting & Regulatory",
+          "control_name": "Annual statement on critical systems and RTOs",
+          "control_description": "Banks must submit an annual statement at the end of each financial year describing the critical systems, their RTOs and the bank's strategy to achieve them."
+        },
+        {
+          "control_id": "RBI-010",
+          "domain": "Reporting & Regulatory",
+          "control_name": "Quarterly reporting of major failures",
+          "control_description": "Bank must submit a quarterly statement reporting major failures during the period for critical systems, customer segments/services impacted due to the failures and steps taken to avoid such failures in future."
+        },
+        {
+          "control_id": "RBI-011",
+          "domain": "Maintenance",
+          "control_name": "Maintenance and reassessment of BCP",
+          "control_description": "BCPs should be maintained by annual reviews and updates to ensure their continued effectiveness; procedures should be included within the organisation's change management programme to ensure that business continuity matters are appropriately addressed."
+        },
+        {
+          "control_id": "RBI-012",
+          "domain": "Industry Coordination",
+          "control_name": "Industry-level contingency coordination",
+          "control_description": "A holistic BCP would incorporate all dimensions of the banking industry including the financial authorities, the financial institutions and the financial market infrastructure; industry level coordination for contingency planning and management efforts of individual institutions is critical to strengthen operational resilience."
+        }
+      ]
+    },
+    {
+      "id": "ISO22301",
+      "name": "ISO 22301:2019 (Business Continuity Management)",
+      "controls": [
+        {
+          "control_id": "ISO22301-001",
+          "domain": "Context",
+          "control_name": "Understanding the organization and its context",
+          "control_description": "The organization shall determine external and internal issues that are relevant to its purpose and that affect its ability to achieve the intended outcomes of its BCMS."
+        },
+        {
+          "control_id": "ISO22301-002",
+          "domain": "Interested parties",
+          "control_name": "Determine interested parties and their requirements",
+          "control_description": "When establishing its BCM framework, the organization shall determine the interested parties that are relevant to the BCMS and the requirements of these interested parties (i.e. their needs and expectations whether stated, generally implied or obligatory)."
+        },
+        {
+          "control_id": "ISO22301-003",
+          "domain": "Legal & Regulatory",
+          "control_name": "Identification and assessment of legal and regulatory requirements",
+          "control_description": "The organization shall establish, implement and maintain a procedure(s) to identify, have access to, and assess the applicable legal and regulatory requirements to which the organization subscribes related to the continuity of its operations, products and services, activities and resources."
+        },
+        {
+          "control_id": "ISO22301-004",
+          "domain": "Scope",
+          "control_name": "Determining the scope of the BCMS",
+          "control_description": "The organization shall determine the boundaries and applicability of the BCM framework in order to establish scope, considering external and internal issues, interested parties and the organization's mission, goals and obligations."
+        },
+        {
+          "control_id": "ISO22301-005",
+          "domain": "Leadership",
+          "control_name": "Top management commitment",
+          "control_description": "Top management shall demonstrate leadership and commitment with respect to the BCMS by ensuring that the business continuity policy and objectives are established, that BCMS requirements are integrated into the organization's business processes, and that resources needed for the BCMS are available."
+        },
+        {
+          "control_id": "ISO22301-006",
+          "domain": "Policy",
+          "control_name": "Establishing the business continuity policy",
+          "control_description": "Top management shall establish a business continuity policy that is appropriate to the purpose of the organization, provides a framework for setting business continuity objectives and includes a commitment to satisfy applicable requirements."
+        },
+        {
+          "control_id": "ISO22301-007",
+          "domain": "Roles & Responsibilities",
+          "control_name": "Defined roles, responsibilities and authorities",
+          "control_description": "The organization shall ensure that roles, responsibilities and authorities for the BCMS are assigned, communicated and understood across the organization."
+        },
+        {
+          "control_id": "ISO22301-008",
+          "domain": "Competence",
+          "control_name": "Personnel competence and awareness",
+          "control_description": "Determine the necessary competence of persons doing work under its control that affects BCMS performance; ensure these persons are competent based on appropriate education, training and experience and retain documented information as evidence of competence."
+        },
+        {
+          "control_id": "ISO22301-009",
+          "domain": "Communication",
+          "control_name": "Internal and external communication requirements",
+          "control_description": "The organization shall determine the need for internal and external communications relevant to the BCM Framework including what to communicate, when, with whom and who will communicate."
+        },
+        {
+          "control_id": "ISO22301-010",
+          "domain": "Documented Information",
+          "control_name": "Control of documented information",
+          "control_description": "Documented information required by the BCMS and this International Standard shall be controlled to ensure it is available and suitable for use where and when needed and adequately protected; control activities include distribution, access, retrieval, storage, preservation, version control, retention and disposition."
+        },
+        {
+          "control_id": "ISO22301-011",
+          "domain": "Risk Assessment & BIA",
+          "control_name": "Business impact analysis and risk assessment processes",
+          "control_description": "The organization shall implement and maintain systematic processes for analysing business impact and assessing the risks of disruption, and shall review the BIA and risk assessment at planned intervals and when significant changes occur."
+        },
+        {
+          "control_id": "ISO22301-012",
+          "domain": "Strategy",
+          "control_name": "Identification and selection of continuity strategies and solutions",
+          "control_description": "Identification and selection of strategies and solutions shall be based on the extent to which they meet the requirements to continue and recover prioritized activities within identified time frames and agreed capacity, protect prioritized activities, reduce likelihood of disruption, shorten disruption period and limit impact on products and services."
+        },
+        {
+          "control_id": "ISO22301-013",
+          "domain": "Resources",
+          "control_name": "Determine resource requirements for continuity solutions",
+          "control_description": "The organization shall determine resource requirements to implement selected business continuity solutions including people, information and data, physical infrastructure, equipment, ICT systems, transportation and logistics, finance, partners and suppliers."
+        },
+        {
+          "control_id": "ISO22301-014",
+          "domain": "Plans & Procedures",
+          "control_name": "Document and maintain business continuity plans and procedures",
+          "control_description": "Plans and procedures shall provide guidance to respond to a disruption, assist with response and recovery, contain actions to continue or recover prioritized activities, activation thresholds, procedures to enable delivery of products/services at agreed capacity, and details to manage immediate consequences."
+        },
+        {
+          "control_id": "ISO22301-015",
+          "domain": "Response Structure",
+          "control_name": "Establish and maintain response teams/structure",
+          "control_description": "The organization shall implement and maintain a response structure identifying one or more teams responsible for responding to disruptions, including contact information and assigned contingency responsibilities."
+        },
+        {
+          "control_id": "ISO22301-016",
+          "domain": "Testing",
+          "control_name": "Testing, exercises and review of BCP/DRP",
+          "control_description": "The business continuity and disaster recovery plans shall be tested at least once annually or when significantly changed to identify incorrect assumptions, oversights, or changes in equipment or personnel; test results shall be reported and used to revise BCP/DRP."
+        },
+        {
+          "control_id": "ISO22301-017",
+          "domain": "Performance Evaluation",
+          "control_name": "Management review and continual improvement",
+          "control_description": "Management review outputs shall include decisions related to continual improvement opportunities and any needed changes to the BCMS (for example updates to BIA, risk assessment, strategies and plans); documented evidence shall be retained and results communicated to interested parties."
+        },
+        {
+          "control_id": "ISO22301-018",
+          "domain": "Implementation",
+          "control_name": "Implement and maintain selected continuity solutions",
+          "control_description": "The organization shall implement and maintain selected business continuity solutions so they can be activated when needed."
+        }
+      ]
+    },
+    {
+      "id": "CSF",
+      "name": "NIST Cybersecurity Framework (CSF)",
+      "controls": [
+        {
+          "control_id": "CSF-001",
+          "domain": "Continuity Planning",
+          "control_name": "Capacity for information processing during contingency",
+          "control_description": "Business continuity plans shall identify the necessary capacity for information processing during contingency operations, e.g., during an information system disruption, compromise or failure."
+        },
+        {
+          "control_id": "CSF-002",
+          "domain": "Continuity Planning",
+          "control_name": "Telecommunications capacity during contingency",
+          "control_description": "Business continuity plans shall identify the necessary capacity for telecommunications during contingency operations."
+        },
+        {
+          "control_id": "CSF-003",
+          "domain": "Continuity Planning",
+          "control_name": "Environmental support during contingency",
+          "control_description": "Business continuity plans shall identify the necessary capacity for environmental support during contingency operations."
+        },
+        {
+          "control_id": "CSF-004",
+          "domain": "Continuity Plan Governance",
+          "control_name": "Plan ownership, escalation and responsibilities",
+          "control_description": "Each business continuity plan shall have an owner, describe the approach for continuity (including how information availability and security will be maintained), specify the escalation plan and activation conditions, and specify the individuals responsible for executing each component of the plan."
+        },
+        {
+          "control_id": "CSF-005",
+          "domain": "Recovery Objectives",
+          "control_name": "Recovery objectives, restoration priorities and metrics",
+          "control_description": "Business continuity plans shall provide recovery objectives, restoration priorities and recovery and restoration metrics to guide timely restoration of essential missions and business functions."
+        },
+        {
+          "control_id": "CSF-006",
+          "domain": "Testing & Maintenance",
+          "control_name": "Testing, maintaining and re-assessing continuity plans",
+          "control_description": "Responsibility shall be assigned for regular reviews of the business continuity plan, with at least part of the plan reviewed annually; testing results shall be used to revise plans and address lessons learned."
+        },
+        {
+          "control_id": "CSF-007",
+          "domain": "Contingency Roles",
+          "control_name": "Assign individuals to contingency responsibilities and retain contact information",
+          "control_description": "Plans shall address contingency roles, assign individuals to contingency responsibilities and contain the contact information of individuals assigned to contingency responsibilities."
+        },
+        {
+          "control_id": "CSF-008",
+          "domain": "Plan Content",
+          "control_name": "Essential missions and business functions identification",
+          "control_description": "Business continuity plans shall identify the essential missions and business functions and the contingency requirements associated with them."
+        }
+      ]
+    },
+    {
+      "id": "IRDAI",
+      "name": "Insurance Regulatory and Development Authority of India",
+      "controls": [
+        {
+          "control_id": "IRDAI-001",
+          "domain": "Continuity",
+          "control_name": "Ability to maintain continuity of operations",
+          "control_description": "Organization must demonstrate the ability to maintain continuity of operations from business and technology perspectives."
+        },
+        {
+          "control_id": "IRDAI-002",
+          "domain": "Assets & Policies",
+          "control_name": "Evaluate information assets for continuity",
+          "control_description": "All information assets and related policies and procedures of an insurance company shall be evaluated from a continuity perspective to support the organization's business objectives."
+        },
+        {
+          "control_id": "IRDAI-003",
+          "domain": "Third Party Management",
+          "control_name": "Third parties must meet continuity objectives",
+          "control_description": "Partners, vendors and service providers must all demonstrate the ability to meet or exceed the organization's continuity objectives at all times."
+        },
+        {
+          "control_id": "IRDAI-004",
+          "domain": "Governance",
+          "control_name": "Crisis Management Committee and Board oversight",
+          "control_description": "The Crisis Management Committee under the overall directions and guidance of the Board Risk Management Committee shall be vested with powers to devise changes to processes, systems, personnel and technology controls to ensure continuity of services."
+        },
+        {
+          "control_id": "IRDAI-005",
+          "domain": "Change Management",
+          "control_name": "Update BCP for application changes",
+          "control_description": "Ensuring that appropriate changes are made to the business continuity plan based on changes made to applications."
+        },
+        {
+          "control_id": "IRDAI-006",
+          "domain": "Incident Response",
+          "control_name": "Incident Response Team leadership",
+          "control_description": "The Crisis Management Manager shall be the Incident Response Team leader for all business continuity related incidents."
+        },
+        {
+          "control_id": "IRDAI-007",
+          "domain": "BCP/DR",
+          "control_name": "Formal BCP and DRP to restore assets by criticality",
+          "control_description": "All the organization's information systems and assets shall be protected against potential failure or disruption of service through a formal business continuity plan and disaster recovery plan that restores assets in accordance with system or asset criticality to organization business processes."
+        },
+        {
+          "control_id": "IRDAI-008",
+          "domain": "Recovery Objectives",
+          "control_name": "Define RTO and RPO for applications",
+          "control_description": "RTO and RPO shall be defined for all applications based on the business requirements."
+        },
+        {
+          "control_id": "IRDAI-009",
+          "domain": "Third Party Management",
+          "control_name": "Third party due diligence for continuity",
+          "control_description": "Due diligence process shall involve evaluation of all available information about the service provider such as security policy, procedures and internal control, audit coverage, reporting and monitoring environment, and business continuity management."
+        },
+        {
+          "control_id": "IRDAI-010",
+          "domain": "BCM Framework",
+          "control_name": "Single BCM framework across organization",
+          "control_description": "Organization's BCM framework shall consist of documented business continuity and disaster recovery plans; a single framework shall be maintained to ensure all plans across businesses and processes are consistent, to consistently address information security requirements, and to identify priorities for testing and maintenance."
+        }
+      ]
+    }
+  ]
+}

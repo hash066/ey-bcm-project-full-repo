@@ -1,0 +1,29 @@
+{
+  "job_id": "747383a8-3939-4cb4-8de0-866f78ee5db4",
+  "processed_at": "2025-10-23T11:56:20.336244",
+  "files_processed": 1,
+  "total_files": 1,
+  "gap_analysis": {
+    "total_controls_checked": 0,
+    "results": []
+  },
+  "processed_files": [
+    {
+      "filename": "BETA-corp-incomplete-policy.docx",
+      "file_path": "uploads\\747383a8-3939-4cb4-8de0-866f78ee5db4\\d288b074-34e1-4b9a-9bd1-afc847c8ee5b.docx",
+      "file_type": "word",
+      "extracted_data": {
+        "text": "INCOMPLETE BUSINESS CONTINUITY DOCUMENT - BETA CORP\nBETA CORPORATION LIMITED\nBusiness Continuity Plan - Draft\nDocument Version: 1.0 (Draft)\nCreated Date: October 2024\nStatus: Under Development\n1. INTRODUCTION\nBeta Corporation acknowledges the need for business continuity planning. This document outlines our initial approach to maintaining operations during disruptions.\n2. SCOPE\nThis plan covers critical business operations for Beta Corporation's main office in Delhi. Remote branches are not yet included in this scope.\n3. CRITICAL FUNCTIONS\n3.1 Identified Functions\nWe have identified the following as important:\nCustomer Service\nIT Operations\nFinance Department\nNote: Detailed analysis is pending.\n4. RECOVERY OBJECTIVES\n4.1 Preliminary Targets\nIT systems should be restored as soon as possible\nCustomer service should resume when feasible\nPayment processing is important but timing not yet defined\nNote: Specific RTO and RPO values have not been established.\n5. COMMUNICATION\n5.1 Contact Information\nPrimary Contact: Operations Manager\nPhone: Not updated\nEmail: ops@betacorp.com\nEmergency Hotline: To be established\n5.2 Employee Notification\nWe plan to notify employees via email and phone calls during emergencies. A mass notification system has been proposed but not yet implemented.\n6. BACKUP PROCEDURES\n6.1 Data Backup\nDaily backups are performed for some systems\nBackup location: External hard drives in office\nCloud backup under consideration\nLast successful backup: Unknown\nNote: Backup restoration has never been tested.\n7. ALTERNATE WORK ARRANGEMENTS\n7.1 Work From Home\nSome employees have laptops and may be able to work from home. However:\nNo formal WFH policy exists\nVPN access limited to 20 users\nRemote access procedures not documented\n7.2 Alternate Site\nNo alternate office location has been identified yet.\n8. TESTING\n8.1 Test Plans\nWe recognize the importance of testing the BCP. However:\nNo tests have been conducted to date\nTest schedule not established\nTest procedures not documented\nAction Item: Schedule first BCP test exercise\n9. TRAINING\n9.1 Staff Awareness\nBCP awareness mentioned in new employee orientation (informal)\nNo dedicated BCP training program exists\nDepartment heads not trained on recovery procedures\n10. THIRD PARTY VENDORS\n10.1 Dependencies\nWe rely on several vendors for critical services:\nInternet Service Provider: Vendor name not documented\nCloud hosting: Using AWS but no formal agreement\nPayment processor: Details pending\nNote: Vendor BCP reviews have not been conducted.\n11. GOVERNANCE\n11.1 Management Oversight\nNo Business Continuity Committee formed\nResponsibility for BCP not formally assigned\nBoard has not reviewed or approved this plan\nBudget for BCP implementation not allocated\n12. REGULATORY COMPLIANCE\n12.1 Requirements\nWe are aware of RBI guidelines on business continuity but:\nDetailed compliance mapping not completed\nISO 22301 certification not pursued\nCompliance gaps not assessed\n13. DOCUMENTATION\n13.1 Current Status\nThis document is in draft form. The following items are missing:\nDetailed recovery procedures\nContact lists for key personnel\nVendor contact information\nEscalation procedures\nDecision-making authority during crisis\nFinancial impact analysis\nInsurance coverage details\nExternal communication templates\n14. NEXT STEPS\nTo complete this BCP, we need to:\nConduct comprehensive Business Impact Analysis\nDefine specific RTO/RPO for all critical functions\nEstablish Business Continuity Committee\nObtain Board approval\nImplement backup and recovery solutions\nDevelop detailed recovery procedures\nConduct training for all staff\nSchedule and perform BCP testing\nReview vendor agreements\nDocument all procedures\nTarget Completion: December 2025 (tentative)\n15. APPROVAL\nPrepared By:\nSuresh Menon, IT Manager (Acting)\nDate: October 2, 2024\nReviewed By:\n(Pending - no reviewer assigned)\nApproved By:\n(Not yet submitted for approval)\nEND OF DRAFT DOCUMENT",
+        "controls": [],
+        "metadata": {
+          "type": "word",
+          "file_path": "uploads\\747383a8-3939-4cb4-8de0-866f78ee5db4\\d288b074-34e1-4b9a-9bd1-afc847c8ee5b.docx",
+          "paragraphs": 121,
+          "tables": 0,
+          "extracted_at": "2025-10-23T11:56:20.336244",
+          "controls_found": 0
+        }
+      }
+    }
+  ]
+}
