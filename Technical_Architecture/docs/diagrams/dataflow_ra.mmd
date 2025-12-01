@@ -1,0 +1,22 @@
+flowchart LR
+    A[User Input] --> B[RA Controller]
+    B --> C[RA Service]
+    C --> D{Data Validation}
+    D -->|Valid| E[Load Asset Context]
+    D -->|Invalid| B
+    E --> F[(PostgreSQL)]
+    F --> G[Prepare Context]
+    G --> H[AI Service]
+    H --> I[Generate Embeddings]
+    I --> J[(Vector DB)]
+    J --> K[Similarity Search]
+    K --> L[Retrieve Similar Risks]
+    L --> H
+    H --> M[Generate Analysis]
+    M --> N[Calculate Risk Score]
+    N --> O[Save Assessment]
+    O --> F
+    O --> P[Return Response]
+    P --> B
+    B --> A
+

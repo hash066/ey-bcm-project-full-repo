@@ -1,0 +1,66 @@
+erDiagram
+    USERS ||--o{ RISK_ASSESSMENTS : creates
+    ASSETS ||--o{ RISK_ASSESSMENTS : assessed_in
+    RISK_ASSESSMENTS ||--o{ RISKS : contains
+    RISK_ASSESSMENTS ||--o{ THREATS : identifies
+    RISK_ASSESSMENTS ||--o{ VULNERABILITIES : identifies
+    RISKS ||--o{ RISK_MITIGATIONS : has
+    AI_ANALYSES ||--o{ RISK_ASSESSMENTS : supports
+    
+    USERS {
+        uuid id PK
+        string email
+    }
+    
+    ASSETS {
+        uuid id PK
+        string name
+    }
+    
+    RISK_ASSESSMENTS {
+        uuid id PK
+        uuid user_id FK
+        uuid asset_id FK
+        string name
+        float risk_score
+        string status
+    }
+    
+    RISKS {
+        uuid id PK
+        uuid risk_assessment_id FK
+        string risk_name
+        string category
+        float likelihood
+        float impact
+        float risk_score
+    }
+    
+    THREATS {
+        uuid id PK
+        uuid risk_assessment_id FK
+        string threat_name
+        string severity
+    }
+    
+    VULNERABILITIES {
+        uuid id PK
+        uuid risk_assessment_id FK
+        string vulnerability_name
+        float cvss_score
+    }
+    
+    RISK_MITIGATIONS {
+        uuid id PK
+        uuid risk_id FK
+        string mitigation_strategy
+        string implementation_status
+    }
+    
+    AI_ANALYSES {
+        uuid id PK
+        uuid reference_id FK
+        string model_name
+        float confidence_score
+    }
+

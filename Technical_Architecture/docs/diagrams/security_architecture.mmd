@@ -1,0 +1,48 @@
+graph TB
+    subgraph "Perimeter Security"
+        FW[Firewall]
+        WAF[Web Application Firewall]
+        DDoS[DDoS Protection]
+    end
+    
+    subgraph "Network Security"
+        VPN[VPN Gateway]
+        VPC[VPC Isolation]
+        SG[Security Groups]
+    end
+    
+    subgraph "Application Security"
+        AUTH[Authentication]
+        AUTHZ[Authorization]
+        ENCRYPT[Encryption]
+        API_SEC[API Security]
+    end
+    
+    subgraph "Data Security"
+        DB_ENCRYPT[Database Encryption]
+        BACKUP[Encrypted Backups]
+        PII_MASK[PII Masking]
+    end
+    
+    subgraph "Monitoring & Compliance"
+        AUDIT[Audit Logging]
+        SIEM[SIEM]
+        COMPLIANCE[Compliance Checks]
+    end
+    
+    FW --> WAF
+    WAF --> DDoS
+    DDoS --> VPN
+    VPN --> VPC
+    VPC --> SG
+    SG --> AUTH
+    AUTH --> AUTHZ
+    AUTHZ --> ENCRYPT
+    ENCRYPT --> API_SEC
+    API_SEC --> DB_ENCRYPT
+    DB_ENCRYPT --> BACKUP
+    BACKUP --> PII_MASK
+    PII_MASK --> AUDIT
+    AUDIT --> SIEM
+    SIEM --> COMPLIANCE
+

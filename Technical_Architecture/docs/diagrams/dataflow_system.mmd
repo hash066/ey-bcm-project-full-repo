@@ -1,0 +1,29 @@
+flowchart TD
+    A[User] -->|HTTP Request| B[API Gateway]
+    B -->|Authenticate| C[Auth Service]
+    C -->|Validate| D[(User DB)]
+    B -->|Authorized Request| E[Service Router]
+    
+    E -->|BIA Request| F[BIA Service]
+    E -->|RA Request| G[RA Service]
+    E -->|Dashboard Request| H[Dashboard Service]
+    E -->|Export Request| I[Export Service]
+    
+    F -->|Query| J[(PostgreSQL)]
+    F -->|AI Analysis| K[AI Service]
+    G -->|Query| J
+    G -->|AI Analysis| K
+    H -->|Query| J
+    H -->|Cache| L[(Redis)]
+    I -->|Query| J
+    I -->|Generate| M[File Storage]
+    
+    K -->|Embeddings| N[(Vector DB)]
+    K -->|Store Results| J
+    
+    F -->|Response| B
+    G -->|Response| B
+    H -->|Response| B
+    I -->|Response| B
+    B -->|HTTP Response| A
+

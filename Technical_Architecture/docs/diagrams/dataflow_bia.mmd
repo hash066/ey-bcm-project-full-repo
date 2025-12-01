@@ -1,0 +1,13 @@
+flowchart TD
+    A[User Creates BIA] --> B[Validate Input]
+    B --> C[Save BIA Draft]
+    C --> D[(PostgreSQL)]
+    D --> E[Load Business Processes]
+    E --> F[AI Analysis]
+    F --> G[Process Analysis]
+    G --> H[Calculate Impact]
+    H --> I[Update Scores]
+    I --> D
+    I --> J[Generate Report]
+    J --> K[Return to User]
+

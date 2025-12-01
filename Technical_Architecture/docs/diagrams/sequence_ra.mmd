@@ -1,0 +1,21 @@
+sequenceDiagram
+    participant U as User
+    participant RA as RA Controller
+    participant RS as RA Service
+    participant AI as AI Service
+    participant VDB as Vector DB
+    participant DB as Database
+    
+    U->>RA: POST /api/risk/assess
+    RA->>RS: assessRisk(riskData)
+    RS->>DB: loadContext(assetId)
+    DB-->>RS: contextData
+    RS->>AI: generateRiskAnalysis(contextData)
+    AI->>VDB: querySimilarRisks(embeddings)
+    VDB-->>AI: similarRisks
+    AI-->>RS: riskAnalysis
+    RS->>RS: calculateRiskScore()
+    RS->>DB: saveRiskAssessment()
+    RS-->>RA: RiskAssessmentResponse
+    RA-->>U: 200 OK
+

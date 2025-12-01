@@ -1,0 +1,8 @@
+graph LR
+    A[Auth Controller] --> B[Auth Service]
+    B --> C[JWT Manager]
+    B --> D[User Repository]
+    B --> E[Role Manager]
+    D --> F[(User DB)]
+    C --> G[Token Store]
+

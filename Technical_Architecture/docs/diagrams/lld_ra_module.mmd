@@ -1,0 +1,11 @@
+graph TB
+    A[RA Controller] --> B[RA Service]
+    B --> C[Risk Analyzer]
+    B --> D[Threat Modeler]
+    B --> E[Risk Calculator]
+    B --> F[RA Repository]
+    C --> G[AI Service]
+    D --> G
+    E --> H[Scoring Matrix]
+    F --> I[(RA Tables)]
+
