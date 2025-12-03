@@ -1,0 +1,114 @@
+erDiagram
+    USERS ||--o{ USER_ROLES : has
+    USERS ||--o{ BIA_ASSESSMENTS : creates
+    USERS ||--o{ RISK_ASSESSMENTS : creates
+    USERS ||--o{ EXPORTS : generates
+    USERS ||--o{ AI_AUDIT_LOG : performs
+    
+    ROLES ||--o{ USER_ROLES : assigned_to
+    PERMISSIONS ||--o{ ROLE_PERMISSIONS : has
+    ROLES ||--o{ ROLE_PERMISSIONS : grants
+    
+    BIA_ASSESSMENTS ||--o{ BIA_PROCESSES : contains
+    BIA_ASSESSMENTS ||--o{ BIA_IMPACTS : has
+    BIA_PROCESSES ||--o{ BIA_DEPENDENCIES : has
+    
+    RISK_ASSESSMENTS ||--o{ RISKS : contains
+    RISK_ASSESSMENTS ||--o{ THREATS : identifies
+    RISK_ASSESSMENTS ||--o{ VULNERABILITIES : identifies
+    RISKS ||--o{ RISK_MITIGATIONS : has
+    
+    ASSETS ||--o{ RISK_ASSESSMENTS : assessed_in
+    ASSETS ||--o{ BIA_ASSESSMENTS : analyzed_in
+    
+    EXPORTS ||--|| EXPORT_TEMPLATES : uses
+    EXPORTS ||--o{ EXPORT_FILES : generates
+    
+    AI_ANALYSES ||--o{ RISK_ASSESSMENTS : supports
+    AI_ANALYSES ||--o{ BIA_ASSESSMENTS : supports
+    AI_ANALYSES ||--o{ AI_AUDIT_LOG : logged_in
+    
+    USERS {
+        uuid id PK
+        string email UK
+        string password_hash
+        string first_name
+        string last_name
+        timestamp created_at
+        timestamp updated_at
+        boolean is_active
+    }
+    
+    ROLES {
+        uuid id PK
+        string name UK
+        string description
+        timestamp created_at
+    }
+    
+    BIA_ASSESSMENTS {
+        uuid id PK
+        uuid user_id FK
+        uuid asset_id FK
+        string name
+        json assessment_data
+        float impact_score
+        string status
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    RISK_ASSESSMENTS {
+        uuid id PK
+        uuid user_id FK
+        uuid asset_id FK
+        string name
+        json risk_data
+        float risk_score
+        string status
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    RISKS {
+        uuid id PK
+        uuid risk_assessment_id FK
+        string risk_name
+        string category
+        float likelihood
+        float impact
+        float risk_score
+        json mitigation_plan
+    }
+    
+    ASSETS {
+        uuid id PK
+        string name
+        string type
+        string description
+        json metadata
+        timestamp created_at
+    }
+    
+    EXPORTS {
+        uuid id PK
+        uuid user_id FK
+        string export_type
+        string format
+        string file_path
+        string status
+        timestamp created_at
+    }
+    
+    AI_ANALYSES {
+        uuid id PK
+        string analysis_type
+        uuid reference_id FK
+        json input_data
+        json output_data
+        string model_name
+        string model_version
+        float confidence_score
+        timestamp created_at
+    }
+

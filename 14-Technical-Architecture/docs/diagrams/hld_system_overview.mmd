@@ -1,0 +1,49 @@
+graph TB
+    subgraph "Client Layer"
+        WEB[Web Browser]
+        MOBILE[Mobile App]
+        ADMIN[Admin Portal]
+    end
+    
+    subgraph "API Gateway"
+        GATEWAY[API Gateway<br/>Authentication & Routing]
+    end
+    
+    subgraph "Application Services"
+        AUTH[Auth Service]
+        BIA[BIA Service]
+        RA[Risk Assessment Service]
+        DASH[Dashboard Service]
+        EXPORT[Export Service]
+        AI[AI/ML Service]
+    end
+    
+    subgraph "Data Layer"
+        PG[(PostgreSQL)]
+        VECTOR[(Vector DB)]
+        CACHE[(Redis Cache)]
+        STORAGE[File Storage]
+    end
+    
+    WEB --> GATEWAY
+    MOBILE --> GATEWAY
+    ADMIN --> GATEWAY
+    
+    GATEWAY --> AUTH
+    GATEWAY --> BIA
+    GATEWAY --> RA
+    GATEWAY --> DASH
+    GATEWAY --> EXPORT
+    GATEWAY --> AI
+    
+    AUTH --> PG
+    BIA --> PG
+    RA --> PG
+    RA --> AI
+    DASH --> PG
+    DASH --> CACHE
+    EXPORT --> PG
+    EXPORT --> STORAGE
+    AI --> VECTOR
+    AI --> PG
+

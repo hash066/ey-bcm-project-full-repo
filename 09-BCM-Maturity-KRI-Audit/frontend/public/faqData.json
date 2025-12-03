@@ -1,0 +1,34 @@
+[
+  {
+    "question": "What is a Business Impact Analysis (BIA)?",
+    "answer": "A Business Impact Analysis identifies critical business functions, assesses the effects of disruptions, and helps organizations prioritize recovery strategies to ensure business continuity."
+  },
+  {
+    "question": "How do I start a new BIA?",
+    "answer": "Go to the 'Overview' or 'Dashboard' section and click on 'Create New BIA'. You'll be guided through defining processes, dependencies, and assessing impacts."
+  },
+  {
+    "question": "What is the purpose of the Risk Matrix?",
+    "answer": "The Risk Matrix visually represents the likelihood and impact of potential risks on your business functions, helping prioritize mitigation strategies."
+  },
+  {
+    "question": "How can I export or download my BIA report?",
+    "answer": "After completing your BIA, go to the 'Reports' section and choose 'Export'. You can download the report in PDF, DOCX, or CSV format depending on your configuration."
+  },
+  {
+    "question": "Who should participate in a BIA process?",
+    "answer": "Typically, department heads, process owners, and IT/business continuity teams collaborate to provide accurate data and ensure a comprehensive analysis."
+  },
+  {
+    "question": "What is the difference between BIA and Risk Assessment?",
+    "answer": "BIA focuses on business process criticality and impact over time, while Risk Assessment identifies threats and their likelihood. Both complement each other in continuity planning."
+  },
+  {
+    "question": "How often should a BIA be updated?",
+    "answer": "A BIA should be reviewed annually or whenever significant organizational or process changes occur, such as new systems, regulations, or restructuring."
+  },
+  {
+    "question": "Can I collaborate with other users on a BIA?",
+    "answer": "Yes. In most implementations, admins can invite collaborators or assign reviewers directly within the BIA dashboard to ensure multi-department input."
+  }
+]

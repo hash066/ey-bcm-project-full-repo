@@ -1,0 +1,1004 @@
+{
+  "nodes": [
+    {
+      "id": "businessContinuityManagement",
+      "type": "custom",
+      "position": {
+        "x": 800.0,
+        "y": 50
+      },
+      "data": {
+        "label": "Service: Business Continuity Management",
+        "role": "Service",
+        "notes": "Overall business continuity management",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#3498db",
+        "color": "#ffffff",
+        "border": "2px solid #2980b9",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "10px",
+        "fontWeight": "bold"
+      },
+      "role_level": "SERVICE"
+    },
+    {
+      "id": "executiveLeadership",
+      "type": "custom",
+      "position": {
+        "x": 800.0,
+        "y": 230
+      },
+      "data": {
+        "label": "Department: Executive Leadership",
+        "role": "Department",
+        "notes": "Overall company direction and strategic leadership",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#f1c40f",
+        "color": "#000000",
+        "border": "2px solid #f39c12",
+        "width": 180,
+        "borderRadius": "5px",
+        "padding": "6px"
+      },
+      "role_level": "SUB_PROCESS"
+    },
+    {
+      "id": "itSupportServices",
+      "type": "custom",
+      "position": {
+        "x": 500.0,
+        "y": 410
+      },
+      "data": {
+        "label": "Service: IT Support Services",
+        "role": "Service",
+        "notes": "Technical support and system maintenance",
+        "head": {
+          "name": "Carlos Martinez",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#3498db",
+        "color": "#ffffff",
+        "border": "2px solid #2980b9",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "10px",
+        "fontWeight": "bold"
+      },
+      "role_level": "SERVICE"
+    },
+    {
+      "id": "financialServices",
+      "type": "custom",
+      "position": {
+        "x": 800.0,
+        "y": 410
+      },
+      "data": {
+        "label": "Service: Financial Services",
+        "role": "Service",
+        "notes": "Financial processing and reporting services",
+        "head": {
+          "name": "Emily Wilson",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#3498db",
+        "color": "#ffffff",
+        "border": "2px solid #2980b9",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "10px",
+        "fontWeight": "bold"
+      },
+      "role_level": "SERVICE"
+    },
+    {
+      "id": "customerService",
+      "type": "custom",
+      "position": {
+        "x": 1100.0,
+        "y": 410
+      },
+      "data": {
+        "label": "Service: Customer Service",
+        "role": "Service",
+        "notes": "Customer support and relationship management",
+        "head": {
+          "name": "Thomas Anderson",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#3498db",
+        "color": "#ffffff",
+        "border": "2px solid #2980b9",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "10px",
+        "fontWeight": "bold"
+      },
+      "role_level": "SERVICE"
+    },
+    {
+      "id": "itInfrastructureBackend",
+      "type": "custom",
+      "position": {
+        "x": 500.0,
+        "y": 590
+      },
+      "data": {
+        "label": "Application: IT Infrastructure Backend",
+        "role": "Application",
+        "notes": "Servers, Networks, Security",
+        "head": {
+          "name": "Carlos Martinez",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#f1c40f",
+        "color": "#000000",
+        "border": "2px solid #f39c12",
+        "width": 180,
+        "borderRadius": "5px",
+        "padding": "6px"
+      },
+      "role_level": "SUB_PROCESS"
+    },
+    {
+      "id": "financialSystemsBackend",
+      "type": "custom",
+      "position": {
+        "x": 800.0,
+        "y": 590
+      },
+      "data": {
+        "label": "Application: Financial Systems Backend",
+        "role": "Application",
+        "notes": "ERP, Accounting, Payroll",
+        "head": {
+          "name": "Emily Wilson",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#f1c40f",
+        "color": "#000000",
+        "border": "2px solid #f39c12",
+        "width": 180,
+        "borderRadius": "5px",
+        "padding": "6px"
+      },
+      "role_level": "SUB_PROCESS"
+    },
+    {
+      "id": "operationsSystemsBackend",
+      "type": "custom",
+      "position": {
+        "x": 1100.0,
+        "y": 590
+      },
+      "data": {
+        "label": "Application: Operations Systems Backend",
+        "role": "Application",
+        "notes": "CRM, Inventory, Logistics",
+        "head": {
+          "name": "Thomas Anderson",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#f1c40f",
+        "color": "#000000",
+        "border": "2px solid #f39c12",
+        "width": 180,
+        "borderRadius": "5px",
+        "padding": "6px"
+      },
+      "role_level": "SUB_PROCESS"
+    },
+    {
+      "id": "softwareDevelopment",
+      "type": "custom",
+      "position": {
+        "x": 50.0,
+        "y": 770
+      },
+      "data": {
+        "label": "Process: Software Development",
+        "role": "Process",
+        "notes": "Manages the complete software development process",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "networkInfrastructureManagement",
+      "type": "custom",
+      "position": {
+        "x": 350.0,
+        "y": 770
+      },
+      "data": {
+        "label": "Process: Network Infrastructure Management",
+        "role": "Process",
+        "notes": "Oversees network operations and maintenance",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "financialReportingAndAnalysis",
+      "type": "custom",
+      "position": {
+        "x": 650.0,
+        "y": 770
+      },
+      "data": {
+        "label": "Process: Financial Reporting and Analysis",
+        "role": "Process",
+        "notes": "Manages financial reporting and compliance",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "cashFlowManagement",
+      "type": "custom",
+      "position": {
+        "x": 950.0,
+        "y": 770
+      },
+      "data": {
+        "label": "Process: Cash Flow Management",
+        "role": "Process",
+        "notes": "Oversees cash flow and treasury operations",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "customerSupportOperations",
+      "type": "custom",
+      "position": {
+        "x": 1250.0,
+        "y": 770
+      },
+      "data": {
+        "label": "Process: Customer Support Operations",
+        "role": "Process",
+        "notes": "Manages customer support and satisfaction",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "inventoryControlAndManagement",
+      "type": "custom",
+      "position": {
+        "x": 1550.0,
+        "y": 770
+      },
+      "data": {
+        "label": "Process: Inventory Control and Management",
+        "role": "Process",
+        "notes": "Oversees inventory and supply chain operations",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "codeReviewAndQualityAssurance",
+      "type": "custom",
+      "position": {
+        "x": -850.0,
+        "y": 950
+      },
+      "data": {
+        "label": "Sub-Process: Code Review and Quality Assurance",
+        "role": "Sub-Process",
+        "notes": "Reviews and ensures software quality",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "softwareTestingAndValidation",
+      "type": "custom",
+      "position": {
+        "x": -550.0,
+        "y": 950
+      },
+      "data": {
+        "label": "Sub-Process: Software Testing and Validation",
+        "role": "Sub-Process",
+        "notes": "Tests and validates software",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "networkSecurityAndMonitoring",
+      "type": "custom",
+      "position": {
+        "x": -250.0,
+        "y": 950
+      },
+      "data": {
+        "label": "Sub-Process: Network Security and Monitoring",
+        "role": "Sub-Process",
+        "notes": "Monitors and secures network",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "networkMaintenanceAndUpdates",
+      "type": "custom",
+      "position": {
+        "x": 50.0,
+        "y": 950
+      },
+      "data": {
+        "label": "Sub-Process: Network Maintenance and Updates",
+        "role": "Sub-Process",
+        "notes": "Maintains and updates network",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "monthlyFinancialReporting",
+      "type": "custom",
+      "position": {
+        "x": 350.0,
+        "y": 950
+      },
+      "data": {
+        "label": "Sub-Process: Monthly Financial Reporting",
+        "role": "Sub-Process",
+        "notes": "Generates monthly financial reports",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "auditAndComplianceManagement",
+      "type": "custom",
+      "position": {
+        "x": 650.0,
+        "y": 950
+      },
+      "data": {
+        "label": "Sub-Process: Audit and Compliance Management",
+        "role": "Sub-Process",
+        "notes": "Manages audit and compliance",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "cashFlowForecasting",
+      "type": "custom",
+      "position": {
+        "x": 950.0,
+        "y": 950
+      },
+      "data": {
+        "label": "Sub-Process: Cash Flow Forecasting",
+        "role": "Sub-Process",
+        "notes": "Forecasts cash flow",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "investmentPortfolioManagement",
+      "type": "custom",
+      "position": {
+        "x": 1250.0,
+        "y": 950
+      },
+      "data": {
+        "label": "Sub-Process: Investment Portfolio Management",
+        "role": "Sub-Process",
+        "notes": "Manages investment portfolio",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "customerTicketManagement",
+      "type": "custom",
+      "position": {
+        "x": 1550.0,
+        "y": 950
+      },
+      "data": {
+        "label": "Sub-Process: Customer Ticket Management",
+        "role": "Sub-Process",
+        "notes": "Manages customer tickets",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "customerFeedbackCollectionAndAnalysis",
+      "type": "custom",
+      "position": {
+        "x": 1850.0,
+        "y": 950
+      },
+      "data": {
+        "label": "Sub-Process: Customer Feedback Collection and Analysis",
+        "role": "Sub-Process",
+        "notes": "Collects and analyzes customer feedback",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "supplierRelationshipManagement",
+      "type": "custom",
+      "position": {
+        "x": 2150.0,
+        "y": 950
+      },
+      "data": {
+        "label": "Sub-Process: Supplier Relationship Management",
+        "role": "Sub-Process",
+        "notes": "Manages supplier relationships",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    },
+    {
+      "id": "warehouseOperationsAndLogistics",
+      "type": "custom",
+      "position": {
+        "x": 2450.0,
+        "y": 950
+      },
+      "data": {
+        "label": "Sub-Process: Warehouse Operations and Logistics",
+        "role": "Sub-Process",
+        "notes": "Manages warehouse operations and logistics",
+        "head": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        }
+      },
+      "sourcePosition": "top",
+      "targetPosition": "bottom",
+      "style": {
+        "background": "#2ecc71",
+        "color": "#ffffff",
+        "border": "2px solid #27ae60",
+        "width": 200,
+        "borderRadius": "5px",
+        "padding": "8px"
+      },
+      "role_level": "PROCESS"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-1",
+      "source": "businessContinuityManagement",
+      "target": "executiveLeadership",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-2",
+      "source": "executiveLeadership",
+      "target": "itSupportServices",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-3",
+      "source": "executiveLeadership",
+      "target": "financialServices",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-4",
+      "source": "executiveLeadership",
+      "target": "customerService",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-5",
+      "source": "itSupportServices",
+      "target": "itInfrastructureBackend",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-6",
+      "source": "financialServices",
+      "target": "financialSystemsBackend",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-7",
+      "source": "customerService",
+      "target": "operationsSystemsBackend",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-8",
+      "source": "itInfrastructureBackend",
+      "target": "softwareDevelopment",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-9",
+      "source": "financialSystemsBackend",
+      "target": "financialReportingAndAnalysis",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-10",
+      "source": "operationsSystemsBackend",
+      "target": "inventoryControlAndManagement",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-11",
+      "source": "softwareDevelopment",
+      "target": "codeReviewAndQualityAssurance",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-12",
+      "source": "softwareDevelopment",
+      "target": "softwareTestingAndValidation",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-13",
+      "source": "networkInfrastructureManagement",
+      "target": "networkSecurityAndMonitoring",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-14",
+      "source": "networkInfrastructureManagement",
+      "target": "networkMaintenanceAndUpdates",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-15",
+      "source": "financialReportingAndAnalysis",
+      "target": "monthlyFinancialReporting",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-16",
+      "source": "cashFlowManagement",
+      "target": "cashFlowForecasting",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-17",
+      "source": "customerSupportOperations",
+      "target": "customerTicketManagement",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-18",
+      "source": "customerSupportOperations",
+      "target": "customerFeedbackCollectionAndAnalysis",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-19",
+      "source": "inventoryControlAndManagement",
+      "target": "warehouseOperationsAndLogistics",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    },
+    {
+      "id": "e-20",
+      "source": "inventoryControlAndManagement",
+      "target": "supplierRelationshipManagement",
+      "animated": true,
+      "style": {
+        "stroke": "#3498db",
+        "strokeWidth": 2.5,
+        "strokeDasharray": "5, 5",
+        "animated": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+graph TB
+    subgraph "Kubernetes Cluster"
+        subgraph "Ingress Layer"
+            INGRESS[NGINX Ingress Controller]
+        end
+        
+        subgraph "Application Pods"
+            AUTH_POD[Auth Service Pod]
+            BIA_POD[BIA Service Pod]
+            RA_POD[RA Service Pod]
+            DASH_POD[Dashboard Service Pod]
+            EXPORT_POD[Export Service Pod]
+            AI_POD[AI Service Pod]
+        end
+        
+        subgraph "Data Layer"
+            PG_POD[(PostgreSQL Pod)]
+            REDIS_POD[(Redis Pod)]
+            VECTOR_POD[(Vector DB Pod)]
+        end
+        
+        subgraph "Storage"
+            PV[Persistent Volumes]
+        end
+        
+        subgraph "Monitoring"
+            PROM[Prometheus]
+            GRAF[Grafana]
+        end
+    end
+    
+    INGRESS --> AUTH_POD
+    INGRESS --> BIA_POD
+    INGRESS --> RA_POD
+    INGRESS --> DASH_POD
+    INGRESS --> EXPORT_POD
+    INGRESS --> AI_POD
+    
+    AUTH_POD --> PG_POD
+    BIA_POD --> PG_POD
+    RA_POD --> PG_POD
+    DASH_POD --> PG_POD
+    DASH_POD --> REDIS_POD
+    EXPORT_POD --> PG_POD
+    AI_POD --> PG_POD
+    AI_POD --> VECTOR_POD
+    
+    PG_POD --> PV
+    VECTOR_POD --> PV
+

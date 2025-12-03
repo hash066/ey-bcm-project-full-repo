@@ -1,0 +1,21 @@
+sequenceDiagram
+    participant C as Client
+    participant GW as API Gateway
+    participant AC as Auth Controller
+    participant AS as Auth Service
+    participant DB as Database
+    participant JWT as JWT Manager
+    
+    C->>GW: POST /api/auth/login
+    GW->>AC: Forward request
+    AC->>AS: authenticate(credentials)
+    AS->>DB: validateUser(email, password)
+    DB-->>AS: User data
+    AS->>AS: verifyPassword()
+    AS->>JWT: generateToken(userId, roles)
+    JWT-->>AS: accessToken, refreshToken
+    AS->>DB: saveRefreshToken(userId, token)
+    AS-->>AC: AuthResponse
+    AC-->>GW: 200 OK + tokens
+    GW-->>C: Response with tokens
+

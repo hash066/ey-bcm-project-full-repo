@@ -1,0 +1,309 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(180deg, #1a1a1a 0%, #232323 100%);
+  color: #e5e5e5;
+  padding: 20px 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
+  overflow: auto;
+  border-right: 1px solid #333;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* Remove transition for instant snap */
+  transition: none !important;
+}
+
+.sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #FFD700 50%, transparent 100%);
+  opacity: 0.6;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+  padding: 20px 6px;
+  transition: none !important;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px 10px;
+  background: linear-gradient(135deg, #232323 0%, #1a1a1a 100%);
+  border-radius: 12px;
+  border: 1px solid #333;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.sidebar.collapsed .sidebar-header {
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 10px 5px;
+}
+
+.sidebar-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #FFD700, #facc15, #FFD700);
+  opacity: 0.8;
+}
+
+.sidebar-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #FFD700;
+  /* Remove transition for instant snap */
+  transition: none !important;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(255, 215, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.sidebar.collapsed .sidebar-title {
+  display: none;
+}
+
+.sidebar.collapsed .menu-list li a {
+  padding: 10px 6px;
+  justify-content: center;
+  border-radius: 8px;
+  margin: 0 2px;
+}
+
+.sidebar.collapsed .menu-list li a:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(250, 204, 21, 0.15) 100%);
+}
+
+.sidebar.collapsed .menu-list li.active a {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #FFD700 0%, #facc15 100%);
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.5);
+}
+
+.collapse-btn {
+  background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+  border: 1px solid #444;
+  color: #FFD700;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collapse-btn:hover {
+  background: linear-gradient(135deg, #FFD700 0%, #facc15 100%);
+  color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.collapse-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+  padding-bottom: 20px;
+}
+
+.sidebar.collapsed .menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+  padding-bottom: 20px;
+}
+
+.menu-list li {
+  margin-bottom: 0;
+  position: relative;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  color: #e5e5e5;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  /* Remove transition for instant snap */
+  transition: none !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  background: transparent;
+  border: 1px solid transparent;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+.menu-list li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(250, 204, 21, 0.05) 100%);
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.menu-list li a:hover::before {
+  opacity: 1;
+}
+
+.menu-list li a .menu-label {
+  /* Remove transition for instant snap */
+  transition: none !important;
+  opacity: 1;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  margin-left: 12px;
+}
+
+.menu-list li a:hover {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(250, 204, 21, 0.1) 100%);
+  color: #FFD700;
+  font-weight: 600;
+  transform: translateX(4px);
+  border-color: rgba(255, 215, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+}
+
+.menu-list li.active a {
+  background: linear-gradient(135deg, #FFD700 0%, #facc15 100%);
+  color: #1a1a1a;
+  font-weight: 700;
+  border-color: #FFD700;
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.4);
+  transform: translateX(6px);
+}
+
+.menu-list li.active a::before {
+  opacity: 0;
+}
+
+.menu-list li.active a span {
+  color: #1a1a1a !important;
+}
+
+.menu-list li.active a .menu-label {
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+/* Icon styling improvements */
+.menu-list li a span:first-child {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  padding: 3px;
+}
+
+.menu-list li a:hover span:first-child {
+  background: rgba(255, 215, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.menu-list li.active a span:first-child {
+  background: rgba(26, 26, 26, 0.2);
+  transform: scale(1.1);
+}
+
+/* Hover effects for icons */
+.menu-list li a span:first-child svg {
+  transition: all 0.3s ease;
+}
+
+.menu-list li a:hover span:first-child svg {
+  filter: drop-shadow(0 2px 4px rgba(255, 215, 0, 0.4));
+}
+
+.menu-list li.active a span:first-child svg {
+  filter: drop-shadow(0 2px 4px rgba(26, 26, 26, 0.4));
+}
+
+/* Custom scrollbar for menu list */
+.menu-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.menu-list::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 3px;
+}
+
+.menu-list::-webkit-scrollbar-thumb {
+  background: #FFD700;
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.menu-list::-webkit-scrollbar-thumb:hover {
+  background: #facc15;
+}
+
+/* Custom scrollbar for main sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #FFD700;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #facc15;
+}

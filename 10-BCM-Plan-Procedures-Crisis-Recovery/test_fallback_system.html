@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Fallback System</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #1a1a1a; color: #fff; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #333; border-radius: 5px; }
+        .success { border-color: #4CAF50; background: #1a2e1a; }
+        .error { border-color: #f44336; background: #2e1a1a; }
+        button { background: #FFD700; color: #000; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin: 5px; }
+        pre { background: #333; padding: 10px; border-radius: 5px; overflow-x: auto; max-height: 300px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fallback System Test</h1>
+        <p>Testing the enhanced fallback system for failed LLM endpoints.</p>
+        
+        <div class="test-section">
+            <h3>Test Impact Scale Matrix Fallback</h3>
+            <button onclick="testImpactMatrixFallback()">Test Impact Matrix</button>
+            <div id="impactResult"></div>
+        </div>
+        
+        <div class="test-section">
+            <h3>Test BCM Policy Fallback</h3>
+            <button onclick="testBCMPolicyFallback()">Test BCM Policy</button>
+            <div id="policyResult"></div>
+        </div>
+        
+        <div class="test-section">
+            <h3>Test BCM Questions Fallback</h3>
+            <button onclick="testBCMQuestionsFallback()">Test BCM Questions</button>
+            <div id="questionsResult"></div>
+        </div>
+    </div>
+
+    <script>
+        // Simulate the fallback functions from llmService.js
+        const getFallbackImpactMatrix = (impactName) => {
+            const matrices = {
+                'Financial': {
+                    impact_scale_matrix: {
+                        '1 Hour': { impact_severity: '1', reason: 'Minimal financial impact on operations' },
+                        '4 Hours': { impact_severity: '2', reason: 'Minor financial losses from delayed transactions' },
+                        '8 Hours': { impact_severity: '3', reason: 'Moderate financial impact on daily revenue' },
+                        '24 Hours': { impact_severity: '4', reason: 'Significant financial losses and customer impact' },
+                        '72 Hours': { impact_severity: '5', reason: 'Critical financial impact threatening business viability' }
+                    }
+                },
+                'Operational': {
+                    impact_scale_matrix: {
+                        '1 Hour': { impact_severity: '1', reason: 'Minimal disruption to business operations' },
+                        '4 Hours': { impact_severity: '2', reason: 'Minor operational delays and inefficiencies' },
+                        '8 Hours': { impact_severity: '3', reason: 'Moderate impact on operational capabilities' },
+                        '24 Hours': { impact_severity: '4', reason: 'Significant operational disruption' },
+                        '72 Hours': { impact_severity: '5', reason: 'Critical operational failure' }
+                    }
+                }
+            };
+            return matrices[impactName] || matrices['Operational'];
+        };
+
+        const getFallbackBCMPolicy = (organizationName, standards = []) => {
+            const standardsText = standards.length > 0 ? standards.join(', ') : 'ISO 22301:2019';
+            return {
+                policy: `${organizationName} is committed to maintaining business continuity and ensuring the resilience of critical business operations. This policy is established in accordance with ${standardsText} and demonstrates our commitment to protecting our stakeholders, employees, customers, and business operations from potential disruptions.`
+            };
+        };
+
+        const getFallbackBCMQuestions = () => {
+            return {
+                questions: [
+                    'What are the critical business processes that must be maintained during a disruption?',
+                    'What are the maximum acceptable downtime periods for each critical process?',
+                    'What resources are required to maintain critical operations during a disruption?',
+                    'How will communication be maintained with stakeholders during an incident?',
+                    'What are the recovery strategies for each critical business function?'
+                ]
+            };
+        };
+
+        function testImpactMatrixFallback() {
+            const result = getFallbackImpactMatrix('Financial');
+            document.getElementById('impactResult').innerHTML = 
+                '<h4>✅ Fallback Impact Matrix Generated</h4><pre>' + 
+                JSON.stringify(result, null, 2) + '</pre>';
+            document.querySelector('#impactResult').parentElement.className = 'test-section success';
+        }
+
+        function testBCMPolicyFallback() {
+            const result = getFallbackBCMPolicy('Test Organization', ['ISO 22301:2019']);
+            document.getElementById('policyResult').innerHTML = 
+                '<h4>✅ Fallback BCM Policy Generated</h4><pre>' + 
+                JSON.stringify(result, null, 2) + '</pre>';
+            document.querySelector('#policyResult').parentElement.className = 'test-section success';
+        }
+
+        function testBCMQuestionsFallback() {
+            const result = getFallbackBCMQuestions();
+            document.getElementById('questionsResult').innerHTML = 
+                '<h4>✅ Fallback BCM Questions Generated</h4><pre>' + 
+                JSON.stringify(result, null, 2) + '</pre>';
+            document.querySelector('#questionsResult').parentElement.className = 'test-section success';
+        }
+    </script>
+</body>
+</html>
